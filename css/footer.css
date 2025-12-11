@@ -1,0 +1,78 @@
+/* Footer styles for ParkFinder */
+.site-footer{
+  background: linear-gradient(135deg,#021214 0%, #02231f 50%, #0b3b2e 100%);
+  color: #fff;
+  border-top: 4px solid rgba(16,185,129,0.12);
+  box-shadow: 0 -6px 30px rgba(2,6,23,0.6);
+}
+.site-footer a{ color: #e6fff6; text-decoration: none; }
+.site-footer a:hover{ color: #bfffe9; text-decoration: underline; }
+.site-footer .container{ max-width:1200px; }
+.site-footer h5, .site-footer h6{ color: #dffef0; }
+.site-footer .small{ color: rgba(255,255,255,0.8); }
+.site-footer .footer-links li{ margin-bottom:6px; }
+
+/* Footer layout */
+.site-footer .row { align-items: start; }
+.site-footer .col-md-4 { margin-bottom: 12px; }
+
+/* Make the footer more eye-catching */
+.site-footer .brand {
+  display:flex; gap:12px; align-items:center; margin-bottom:6px;
+}
+.site-footer .brand .logo {
+  width:44px; height:44px; border-radius:8px; overflow:hidden; box-shadow:0 6px 20px rgba(2,6,23,0.5);
+  background: linear-gradient(135deg,#10b981,#14b8a6);
+}
+.site-footer .brand .title { font-weight:700; letter-spacing:0.3px; color:#fff; }
+
+/* Highlight box for quick CTA */
+.site-footer .cta {
+  background: rgba(16,185,129,0.08); border-radius:10px; padding:10px; margin-top:8px;
+  border: 1px solid rgba(16,185,129,0.12);
+}
+.site-footer .cta a{ color: #0a2f23; font-weight:700; }
+
+/* Make text readable on small screens */
+@media (max-width: 768px){
+  .site-footer { padding: 28px 14px; }
+  .site-footer h5 { font-size: 1.05rem; }
+}
+
+/* Ensure info-card heights remain the same */
+.info-card{ min-height: 230px; display:flex; align-items:center; justify-content:center; }
+
+/* Subtle separators */
+.site-footer .sep { height:1px; background: rgba(255,255,255,0.04); margin:14px 0; }
+
+/* Footer bottom */
+.site-footer .bottom { border-top: 1px solid rgba(255,255,255,0.03); padding-top:12px; margin-top:10px; color: rgba(255,255,255,0.6); }
+
+/* Footer thumbnail gallery centered */
+.site-footer .footer-thumbs { justify-content: center; }
+.site-footer .footer-thumb { display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; }
+.site-footer .footer-thumb img { width:92px; height:64px; object-fit:cover; border-radius:8px; box-shadow: 0 6px 18px rgba(2,6,23,0.45); border: 2px solid rgba(255,255,255,0.04); }
+.site-footer .footer-thumb .caption { font-size:12px; margin-top:6px; color: rgba(255,255,255,0.9); }
+
+@media (max-width:576px){
+  .site-footer .footer-thumb img{ width:72px; height:52px; }
+}
+
+/* Footer boxed thumbnail variants (compact info-card style) */
+.site-footer .footer-thumbs { display:flex; gap:18px; align-items:center; justify-content:center; }
+.site-footer .footer-thumb { display:block; text-decoration:none; }
+.site-footer .footer-thumb .info-card { width:150px; min-height:130px; padding:10px; border-radius:14px; background: rgba(255,255,255,0.03); display:flex; flex-direction:column; align-items:center; justify-content:flex-start; box-shadow: 0 8px 22px rgba(2,6,23,0.12); border:1px solid rgba(255,255,255,0.03); transition: transform 0.35s ease, box-shadow 0.35s ease; }
+.site-footer .footer-thumb .info-card img { width:100%; height:78px; object-fit:cover; border-radius:8px; display:block; margin-top:8px; }
+.site-footer .footer-thumb .caption-top { display:inline-block; padding:4px 8px; border-radius:999px; background: rgba(0,0,0,0.18); color:#bfffe9; font-weight:600; font-size:12px; }
+.site-footer .footer-thumb .info-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.18); }
+
+/* Reduce variant intensity in footer */
+.site-footer .footer-thumb .info-card.highlight-1 { box-shadow: 0 8px 18px rgba(16,185,129,0.04); }
+.site-footer .footer-thumb .info-card.highlight-2 { box-shadow: 0 8px 18px rgba(99,102,241,0.04); }
+.site-footer .footer-thumb .info-card.highlight-3 { box-shadow: 0 8px 18px rgba(249,115,22,0.04); }
+.site-footer .footer-thumb .info-card.highlight-4 { box-shadow: 0 8px 18px rgba(14,165,233,0.04); }
+
+@media (max-width:576px){
+  .site-footer .footer-thumb .info-card { width:120px; min-height:110px; }
+  .site-footer .footer-thumb .info-card img { height:64px; }
+}

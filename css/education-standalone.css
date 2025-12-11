@@ -1,0 +1,248 @@
+/* ===== EDUCATION PAGE - COMPLETE STANDALONE CSS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --teal-500: #14b8a6;
+    --teal-600: #0d9488;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 50%, #ecfeff 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 0.75rem 0;
+}
+
+.glass-nav.scrolled {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(180deg);
+}
+
+.nav-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-nav-link {
+    padding: 0.5rem 1rem !important;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: #000000 !important;
+}
+
+.glass-nav-link:hover {
+    transform: translateY(-2px);
+    color: #000000 !important;
+}
+
+.glass-nav-link.active {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    color: white !important;
+}
+
+/* Buttons */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+    transform: translateY(-2px);
+}
+
+/* Glass Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Section Container */
+.section-container {
+    min-height: calc(100vh - 80px);
+    padding-top: 120px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+.section-container.active {
+    display: block;
+}
+
+/* Tabs */
+.glass-tabs {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.glass-tabs .nav-link {
+    border: none;
+    border-radius: 12px;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.glass-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.glass-tabs .nav-link.active {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    color: white;
+}
+
+/* Icon Badge */
+.icon-badge {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.bg-gradient-custom {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+}
+
+.text-gradient {
+    color: var(--emerald-600);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tab Content */
+.tab-content > div {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Utility */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button, a {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 1.5rem;
+    }
+    
+    .icon-badge {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Make gallery images uniform size */
+.collapsible-gallery img,
+.info-card img,
+.park-card-img,
+.glass-card img.object-fit-cover {
+    width: 100%;
+    height: 380px; /* slightly more height for better visibility */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Slightly smaller on small screens */
+@media (max-width: 768px) {
+    .collapsible-gallery img,
+    .info-card img,
+    .park-card-img,
+    .glass-card img.object-fit-cover {
+        height: 260px;
+    }
+}
+
+/* Specific rule for ecosystem images to ensure consistent height/alignment */
+.ecosystem-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .ecosystem-img {
+        height: 260px;
+    }
+}

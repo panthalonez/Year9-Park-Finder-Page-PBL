@@ -1,0 +1,42 @@
+/* Spin The Wheel shared styles */
+.floating-spin-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #10b981, #14b8a6);
+    color: white;
+    z-index: 1100;
+    box-shadow: 0 8px 24px rgba(16,185,129,0.18);
+    cursor: pointer;
+    border: none;
+}
+.floating-spin-btn:active { transform: translateY(1px); }
+
+.wheel-wrapper { position: relative; width: 420px; height: 420px; margin: 0 auto; }
+.wheel { width: 420px; height: 420px; border-radius: 50%; position: relative; overflow: hidden; box-shadow: 0 8px 30px rgba(2,6,23,0.4); transition: transform 4s cubic-bezier(.15,.8,.2,1); }
+.wheel.spin { transition: transform 4s cubic-bezier(.15,.8,.2,1); }
+.wheel .slice-label { position: absolute; left: 50%; top: 50%; transform-origin: center; font-size: 13px; color: #061017; font-weight:700; text-shadow: 0 1px 0 rgba(255,255,255,0.6); pointer-events: none; display: block; max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pointer { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 26px; color: #fffb; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.6)); pointer-events: none; z-index: 1051; }
+.modal-content .btn { margin: 0 6px; }
+#wheelResult { min-height: 56px; display:flex; align-items:center; justify-content:center; color:#dfffe6; }
+
+/* Make wheel responsive on small screens */
+@media (max-width: 768px) {
+    .wheel-wrapper { width: 300px; height: 300px; }
+    .wheel { width: 300px; height: 300px; }
+    .wheel .slice-label { max-width: 110px; font-size: 11px; }
+    .pointer { font-size: 20px; top: -10px; }
+}
+
+@media (max-width: 420px) {
+    .wheel-wrapper { width: 260px; height: 260px; }
+    .wheel { width: 260px; height: 260px; }
+    .wheel .slice-label { max-width: 90px; font-size: 10px; }
+    .pointer { font-size: 18px; top: -8px; }
+}

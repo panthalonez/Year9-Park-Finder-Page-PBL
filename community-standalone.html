@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFinder - Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="/IMG/Echoes of the Green Illegal Naked.png" type="image/png">
+    <link rel="stylesheet" href="css/community-standalone.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/global-cards.css">
+    <style>
+    .info-card{min-height:220px;display:flex;align-items:center}
+    </style>
+    <link rel="stylesheet" href="css/spin-wheel.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home-standalone.html">
+                <div class="logo-icon me-2">
+                    <img id="navLogo" src="/IMG/Echoes of the Green Legal Naked.png" alt="Logo" class="nav-logo-img">
+                </div>
+                <span class="gradient-text fw-bold">ParkFinder</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="home-standalone.html">
+                            <i class="bi bi-house-door me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="parks-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Parks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link active" href="community-standalone.html">
+                            <i class="bi bi-people me-1"></i> Community
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="education-standalone.html">
+                            <i class="bi bi-book me-1"></i> Learn
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gradient" href="quiz-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Find My Park
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <section id="community" class="section-container active">
+            <div class="container pt-5">
+                <div class="glass-card p-4 mb-4">
+                    <h1 class="mb-2">Community Feed</h1>
+                    <p class="text-secondary mb-0">Share your park adventures and connect with fellow nature enthusiasts</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <!-- Create Post -->
+                        <div class="glass-card p-4 mb-4">
+                            <div class="d-flex gap-3">
+                                <div class="avatar-circle bg-gradient-custom">You</div>
+                                <div class="flex-fill">
+                                    <textarea class="form-control glass-input mb-3" rows="3" placeholder="Share your park experience..."></textarea>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-glass btn-sm">
+                                            <i class="bi bi-camera me-2"></i> Add Photo
+                                        </button>
+                                        <button class="btn btn-gradient btn-sm">
+                                            <i class="bi bi-send me-2"></i> Post
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Posts -->
+                        <div id="communityPosts">
+                            <!-- Posts will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 sticky-top" style="top: 100px;">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <i class="bi bi-graph-up-arrow text-gradient"></i>
+                                <h5 class="mb-0">Trending Topics</h5>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="trending-topic">
+                                    <span>#FallColors</span>
+                                    <span class="text-muted small">2.3K posts</span>
+                                </button>
+                                <button class="trending-topic">
+                                    <span>#HikingAdventures</span>
+                                    <span class="text-muted small">1.8K posts</span>
+                                </button>
+                                <button class="trending-topic">
+                                    <span>#PicnicSeason</span>
+                                    <span class="text-muted small">1.2K posts</span>
+                                </button>
+                                <button class="trending-topic">
+                                    <span>#FamilyFun</span>
+                                    <span class="text-muted small">890 posts</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Page-specific JS only -->
+    <script src="js/community-standalone.js"></script>
+    <script src="js/parks-data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/spin-wheel.js"></script>
+        <footer class="site-footer">
+            <div class="container py-4 text-light">
+                <div class="d-flex gap-3 flex-wrap footer-thumbs mb-3" id="favoritesRow">
+                    <!-- Favorites will be injected here by JavaScript (up to 4 items) -->
+                </div>
+                <div class="text-center small mt-2">© 2025 ParkFinder</div>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* Global card sizing to keep info-card, highlights, and footer favorites consistent */
+.info-card {
+    box-sizing: border-box;
+    min-height: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.info-card .caption-top {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 13px;
+    color: #9fffb1;
+    z-index: 2;
+}
+
+.info-card img {
+    width: 100%;
+    height: calc(100% - 32px);
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.placeholder-plus {
+    height: 200px;
+}
+
+.highlight-inner {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.footer-fav { height: 200px; }
+.footer-thumb { width: 220px; }
+
+/* keep the small unfavorite button visible */
+.fav-remove { z-index: 30; }

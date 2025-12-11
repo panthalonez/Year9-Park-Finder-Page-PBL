@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFinder - Home</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/IMG/Echoes of the Green Illegal Naked.png" type="image/png">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Page-specific CSS only -->
+    <link rel="stylesheet" href="css/home-standalone.css">
+    <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/global-cards.css">
+    <style>
+    /* consistent info-card sizing (applies per-page) */
+    .info-card{min-height:220px;display:flex;align-items:center}
+    /* ensure feature cards and feature boxes match heights */
+    .feature-card{min-height:220px;display:flex;flex-direction:column;justify-content:center}
+    .feature-box{min-height:220px;display:flex;align-items:center}
+    .glass-card{height:100%}
+    </style>
+        <link rel="stylesheet" href="css/spin-wheel.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home-standalone.html">
+                <div class="logo-icon me-2">
+                    <img id="navLogo" src="/IMG/Echoes of the Green Legal Naked.png" alt="Logo" class="nav-logo-img">
+                </div>
+                <span class="gradient-text fw-bold">ParkFinder</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link active" href="home-standalone.html">
+                            <i class="bi bi-house-door me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="parks-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Parks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="community-standalone.html">
+                            <i class="bi bi-people me-1"></i> Community
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="education-standalone.html">
+                            <i class="bi bi-book me-1"></i> Learn
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gradient" href="quiz-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Find My Park
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section-container active">
+            <!-- Hero video wrapper -->
+            <div class="hero-video-wrapper">
+                <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="/IMG/Echoes of the Green Illegal Naked.png">
+                    <source src="Vid/hero.mp4" type="video/mp4">
+                    <source src="Vid/Water Sprinkler Br Nyr Poh Kwr.MOV" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-video-overlay"></div>
+                <div class="container hero-video-content">
+                    <div class="hero-content text-center">
+                        <div class="glass-icon mb-4 fade-in">
+                            <img src="/IMG/Echoes of the Green Illegal Naked.png" alt="Logo">
+                        </div>
+                        <h1 class="display-3 fw-bold mb-4 gradient-text fade-in-up">
+                            Discover Your Perfect Park
+                        </h1>
+                        <p class="lead mb-5 text-white fade-in-up delay-1">
+                            Find ideal outdoor spaces tailored to your preferences. Explore local parks, 
+                            learn about their unique features, and join a community of nature enthusiasts.
+                        </p>
+                        
+                        <div class="row g-4 mt-5">
+                            <div class="col-md-4 fade-in-up delay-3">
+                                <div class="glass-card feature-card" onclick="location.href='quiz-standalone.html'">
+                                    <i class="bi bi-compass fs-1 text-gradient mb-3"></i>
+                                    <h3 class="h5 mb-3">Personalized Recommendations</h3>
+                                    <p class="text-white mb-0">Get park suggestions based on your unique preferences and interests</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 fade-in-up delay-4">
+                                <div class="glass-card feature-card" onclick="location.href='education-standalone.html'">
+                                    <i class="bi bi-book fs-1 text-gradient mb-3"></i>
+                                    <h3 class="h5 mb-3">Learn & Explore</h3>
+                                    <p class="text-white mb-0">Discover fascinating facts about local ecosystems and wildlife</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 fade-in-up delay-5">
+                                <div class="glass-card feature-card" onclick="location.href='community-standalone.html'">
+                                    <i class="bi bi-people fs-1 text-gradient mb-3"></i>
+                                    <h3 class="h5 mb-3">Community Engagement</h3>
+                                    <p class="text-white mb-0">Share experiences, reviews, and connect with fellow park lovers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="about-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">About ParkFinder</h2>
+                    <p class="section-subtitle">Connecting communities with nature</p>
+                </div>
+
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="about-image-container">
+                            <img src="https://picsum.photos/500/400?random=50" alt="About ParkFinder" class="about-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="about-content">
+                            <p class="about-text">ParkFinder is a community-driven platform dedicated to helping people discover and engage with green spaces. We believe that access to nature is fundamental to wellbeing and community connection.</p>
+                            
+                            <div class="stats-grid mt-4 mb-4">
+                                <div class="stat-box">
+                                    <h3 class="stat-number">18</h3>
+                                    <p class="stat-label">Parks Listed</p>
+                                </div>
+                                <div class="stat-box">
+                                    <h3 class="stat-number">1k+</h3>
+                                    <p class="stat-label">Active Users</p>
+                                </div>
+                                <div class="stat-box">
+                                    <h3 class="stat-number">30+</h3>
+                                    <p class="stat-label">Community Events</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="parks-standalone.html" class="btn btn-gradient">Explore Parks</a>
+                                <a href="community-standalone.html" class="btn btn-glass">Join Community</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision, Mission, Values Section -->
+        <section id="vision-mission" class="vision-mission-section py-5">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <!-- Vision -->
+                    <div class="col-lg-4">
+                        <div class="vision-mission-card">
+                            <div class="card-icon vision-icon">
+                                <i class="bi bi-telescope"></i>
+                            </div>
+                            <h3>Our Driving Question</h3>
+                            <p>How can Year 9 students design a website that raises awareness about local park revitalization while helping visitors understand and experience the park more mindfully through education and engagement?</p>
+                        </div>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="col-lg-4">
+                        <div class="vision-mission-card">
+                            <div class="card-icon mission-icon">
+                                <i class="bi bi-target"></i>
+                            </div>
+                            <h3>Our Mission</h3>
+                            <p>Empower communities to discover, explore, and steward local parks through intuitive technology, educational resources, and meaningful social engagement.</p>
+                        </div>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="col-lg-4">
+                        <div class="vision-mission-card">
+                            <div class="card-icon values-icon">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <h3>Our Essential Question</h3>
+                            <p>How can we, Year 9, Group 1 students develop a digital park-recommendation website that uses user preferences to suggest ideal spots, educates visitors about park features, and promotes local parks through increased community engagement?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/What We Do Section -->
+        <section id="what-we-do" class="what-we-do-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">What We Do</h2>
+                    <p class="section-subtitle">Explore our key features</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="bi bi-map"></i>
+                            </div>
+                            <h4>Interactive Maps</h4>
+                            <p>Discover parks near you with our easy-to-use mapping tools and location filters.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h4>Education</h4>
+                            <p>Learn about local ecosystems, wildlife, and sustainable park stewardship.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h4>Community</h4>
+                            <p>Connect with park enthusiasts, share experiences, and join local events.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="bi bi-compass"></i>
+                            </div>
+                            <h4>Recommendations</h4>
+                            <p>Get personalized park suggestions based on your preferences and interests.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Box Section -->
+            <!-- Neon Particles -->
+            <div class="neon-particles">
+                <span style="left:5%; animation-delay:0s;"></span>
+                <span style="left:15%; animation-delay:1s;"></span>
+                <span style="left:25%; animation-delay:2s;"></span>
+                <span style="left:35%; animation-delay:0.5s;"></span>
+                <span style="left:45%; animation-delay:1.5s;"></span>
+                <span style="left:55%; animation-delay:0.2s;"></span>
+                <span style="left:65%; animation-delay:2.3s;"></span>
+                <span style="left:75%; animation-delay:0.7s;"></span>
+                <span style="left:85%; animation-delay:1.8s;"></span>
+                <span style="left:95%; animation-delay:0.9s;"></span>
+            </div>
+
+            <div class="container position-relative" style="z-index:1;">
+                <div class="row justify-content-center mb-5 fade-in">
+                    <div class="col-lg-10 text-center">
+                        <p class="lead mb-2">Discover parks and hidden spots with our interactive map.</p>
+                        <p class="lead mb-2">Stay inspired by events and activities around your community.</p>
+                        <p class="lead">Experience fresh air, movement, and nature for a healthier you.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mb-5 fade-in">
+                    <a href="parks-standalone.html" class="btn btn-neon btn-lg px-4 py-2 shadow-sm">
+                        Explore Parks Now
+                    </a>
+                </div>
+
+                <!-- top placeholder boxes removed -->
+
+                <!-- Park Highlights section removed -->
+
+                <!-- removed inline credits; moved into footer credits row -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Page-specific JS only -->
+    <script src="js/home-standalone.js"></script>
+    <script src="js/parks-data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/spin-wheel.js"></script>
+    <footer class="site-footer">
+        <div class="container py-4 text-light">
+            <div class="d-flex gap-3 flex-wrap footer-thumbs mb-3" id="favoritesRow">
+                <!-- Favorites will be injected here by JavaScript (up to 4 items) -->
+            </div>
+            <div class="text-center small mt-2">© 2025 ParkFinder</div>
+        </div>
+    </footer>
+</body>
+</html>

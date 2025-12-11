@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFinder - Parks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="/IMG/Echoes of the Green Illegal Naked.png" type="image/png">
+    <link rel="stylesheet" href="css/parks-standalone.css">
+    <link rel="stylesheet" href="css/global-cards.css">
+    <link rel="stylesheet" href="css/spin-wheel.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home-standalone.html">
+                <div class="logo-icon me-2">
+                    <img id="navLogo" src="/IMG/Echoes of the Green Legal Naked.png" alt="Logo" class="nav-logo-img">
+                </div>
+                <span class="gradient-text fw-bold">ParkFinder</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="home-standalone.html">
+                            <i class="bi bi-house-door me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link active" href="parks-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Parks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="community-standalone.html">
+                            <i class="bi bi-people me-1"></i> Community
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="education-standalone.html">
+                            <i class="bi bi-book me-1"></i> Learn
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gradient" href="quiz-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Find My Park
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <section id="parks" class="section-container active">
+            <div class="container pt-5">
+                <div class="glass-card p-4 mb-4">
+                    <h1 class="mb-2">Explore Parks</h1>
+                    <p class="text-secondary mb-0" id="parksSubtitle">Discover amazing parks in your area</p>
+                </div>
+                
+                <div class="row g-4" id="parksGrid">
+                    <!-- Parks will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="info-box">
+        <!-- Neon Particles -->
+        <div class="neon-particles">
+            <span style="left:5%; animation-delay:0s;"></span>
+            <span style="left:15%; animation-delay:1s;"></span>
+            <span style="left:25%; animation-delay:2s;"></span>
+            <span style="left:35%; animation-delay:0.5s;"></span>
+            <span style="left:45%; animation-delay:1.5s;"></span>
+            <span style="left:55%; animation-delay:0.2s;"></span>
+            <span style="left:65%; animation-delay:2.3s;"></span>
+            <span style="left:75%; animation-delay:0.7s;"></span>
+            <span style="left:85%; animation-delay:1.8s;"></span>
+            <span style="left:95%; animation-delay:0.9s;"></span>
+        </div>
+
+        <div class="container position-relative" style="z-index:1;">
+            <div class="row justify-content-center mb-5 fade-in">
+                <div class="col-lg-10 text-center">
+                    <p class="lead mb-2">Discover parks and hidden spots with our interactive map.</p>
+                    <p class="lead mb-2">Stay inspired by events and activities around your community.</p>
+                    <p class="lead">Experience fresh air, movement, and nature for a healthier you.</p>
+                </div>
+            </div>
+
+            <div class="text-center mb-5 fade-in">
+                <a href="parks-standalone.html" class="btn btn-neon btn-lg px-4 py-2 shadow-sm">
+                    Explore Parks Now
+                </a>
+             </div>
+
+            <!-- Spin button removed here; shared `js/spin-wheel.js` injects a floating button and modal -->
+
+            <!-- removed top info boxes as requested -->
+
+                <div class="container mt-5">
+                <h4 class="text-center mb-4" style="color:#9fffb1;">Park Highlights</h4>
+                <div class="row g-4 fade-in park-highlights-row">
+                    <div class="col-md-3">
+                        <div class="info-card glow-card highlight-1 placeholder-plus" data-slot="0">
+                            <div class="caption-top">Bandula Park</div>
+                            <div class="plus-box">+</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-card glow-card highlight-2 placeholder-plus" data-slot="1">
+                            <div class="caption-top">Hlawga National Park</div>
+                            <div class="plus-box">+</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-card glow-card highlight-3 placeholder-plus" data-slot="2">
+                            <div class="caption-top">Kandawgyi Lake Park</div>
+                            <div class="plus-box">+</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-card glow-card highlight-4 placeholder-plus" data-slot="3">
+                            <div class="caption-top">Inya Park</div>
+                            <div class="plus-box">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 fade-in">
+                <p style="color:#9fffb1; font-size:13px;">@Zin, All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Page-specific JS only -->
+    <script src="js/parks-standalone.js"></script>
+    <script src="js/parks-data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/spin-wheel.js"></script>
+    
+    <!-- Spin the Wheel is injected by shared JS -->
+    <footer class="site-footer">
+        <div class="container py-4 text-light">
+            <div class="text-center small mt-2">© 2025 ParkFinder</div>
+        </div>
+    </footer>
+</body>
+</html>

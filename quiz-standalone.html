@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFinder - Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="/IMG/Echoes of the Green Illegal Naked.png" type="image/png">
+    <link rel="stylesheet" href="css/quiz-standalone.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/global-cards.css">
+    <style>
+    .info-card{min-height:220px;display:flex;align-items:center}
+    </style>
+    <link rel="stylesheet" href="css/spin-wheel.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home-standalone.html">
+                <div class="logo-icon me-2">
+                    <img id="navLogo" src="/IMG/Echoes of the Green Legal Naked.png" alt="Logo" class="nav-logo-img">
+                </div>
+                <span class="gradient-text fw-bold">ParkFinder</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="home-standalone.html">
+                            <i class="bi bi-house-door me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="parks-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Parks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="community-standalone.html">
+                            <i class="bi bi-people me-1"></i> Community
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-nav-link" href="education-standalone.html">
+                            <i class="bi bi-book me-1"></i> Learn
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gradient" href="quiz-standalone.html">
+                            <i class="bi bi-compass me-1"></i> Find My Park
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <section id="quiz" class="section-container active">
+            <div class="container pt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="glass-card p-5">
+                            <!-- Quiz Steps -->
+                            <div id="quizStep1" class="quiz-step active">
+                                <h2 class="mb-4">What activities interest you?</h2>
+                                <p class="text-secondary mb-4">Select all that apply</p>
+                                
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-gradient-bar" style="width: 33%"></div>
+                                </div>
+                                
+                                <div class="row g-3 mb-4">
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="hiking">
+                                            <div class="activity-emoji">😌</div>
+                                            <div class="activity-label">Relaxing</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="picnicking">
+                                            <div class="activity-emoji">🧺</div>
+                                            <div class="activity-label">Picnicking</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="biking">
+                                            <div class="activity-emoji">🚴</div>
+                                            <div class="activity-label">Biking</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="playground">
+                                            <div class="activity-emoji">🎠</div>
+                                            <div class="activity-label">Playground</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="photography">
+                                            <div class="activity-emoji">📸</div>
+                                            <div class="activity-label">Photography</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="wildlife">
+                                            <div class="activity-emoji">🌿</div>
+                                            <div class="activity-label">Nature</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="sports">
+                                            <div class="activity-emoji">⚽</div>
+                                            <div class="activity-label">Sports</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="activity-card" data-activity="relaxation">
+                                            <div class="activity-emoji">😴</div>
+                                            <div class="activity-label">Resting</div>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-glass" disabled><i class="bi bi-chevron-left me-2"></i> Back</button>
+                                    <button class="btn btn-gradient" id="step1Next" onclick="nextQuizStep(2)" disabled>Next <i class="bi bi-chevron-right ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div id="quizStep2" class="quiz-step">
+                                <h2 class="mb-4">What's your preferred difficulty?</h2>
+                                <p class="text-secondary mb-4">Select one option</p>
+                                
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-gradient-bar" style="width: 66%"></div>
+                                </div>
+                                
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-4">
+                                        <div class="difficulty-card" data-difficulty="easy">
+                                            <h5>Easy</h5>
+                                            <p class="text-secondary small mb-0">Flat trails, short distances</p>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="difficulty-card" data-difficulty="moderate">
+                                            <h5>Moderate</h5>
+                                            <p class="text-secondary small mb-0">Some hills, 2-4 miles</p>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="difficulty-card" data-difficulty="challenging">
+                                            <h5>Challenging</h5>
+                                            <p class="text-secondary small mb-0">Steep terrain, 5+ miles</p>
+                                            <i class="bi bi-check-circle-fill check-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-glass" onclick="nextQuizStep(1)"><i class="bi bi-chevron-left me-2"></i> Back</button>
+                                    <button class="btn btn-gradient" id="step2Next" onclick="nextQuizStep(3)" disabled>Next <i class="bi bi-chevron-right ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div id="quizStep3" class="quiz-step">
+                                <h2 class="mb-4">What features matter most?</h2>
+                                <p class="text-secondary mb-4">Select all that apply</p>
+                                
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-gradient-bar" style="width: 100%"></div>
+                                </div>
+                                
+                                <div class="row g-2 mb-4">
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="parking">🅿️ Parking</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="restrooms">🚻 Restrooms</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="picnic">🧺 Picnic Area</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="water">💧 Water Access</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="trails">🥾 Trails</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="accessible">♿ Accessible</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="dog-friendly">🐕 Dog Friendly</div></div>
+                                    <div class="col-6 col-md-4"><div class="feature-tag" data-feature="playground">🎡 Playground</div></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-glass" onclick="nextQuizStep(2)"><i class="bi bi-chevron-left me-2"></i> Back</button>
+                                    <button class="btn btn-gradient" id="step3Next" onclick="completeQuiz()" disabled>Find Parks <i class="bi bi-chevron-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Page-specific JS only -->
+    <script src="js/quiz-standalone.js"></script>
+    <script src="js/parks-data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/spin-wheel.js"></script>
+    <footer class="site-footer">
+        <div class="container py-4 text-light">
+            <div class="d-flex gap-3 flex-wrap footer-thumbs mb-3" id="favoritesRow">
+                <!-- Favorites will be injected here by JavaScript (up to 4 items) -->
+            </div>
+            <div class="text-center small mt-2">© 2025 ParkFinder</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,493 @@
+/* ===== PARKS PAGE - COMPLETE STANDALONE CSS ===== */
+/* This file contains ALL CSS needed for parks-standalone.html */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --teal-500: #14b8a6;
+    --teal-600: #0d9488;
+    --cyan-300: #67e8f9;
+    --emerald-300: #6ee7b7;
+    --teal-300: #5eead4;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 50%, #ecfeff 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== Navigation ===== */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 0.75rem 0;
+}
+
+.glass-nav.scrolled {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: transform 0.6s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(180deg);
+}
+
+.nav-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.logo-icon:hover img {
+    transform: scale(1.05);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: #000000 !important;
+    margin: 0 0.25rem;
+}
+
+.glass-nav-link:hover {
+    transform: translateY(-2px);
+    color: #000000 !important;
+}
+
+.glass-nav-link.active {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ===== Buttons ===== */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    color: #111827;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Glass Cards ===== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Section Container ===== */
+.section-container {
+    min-height: calc(100vh - 80px);
+    padding-top: 120px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+}
+
+.section-container.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ===== Park Cards ===== */
+.park-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.park-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.park-card-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.park-card:hover .park-card-img {
+    transform: scale(1.1);
+}
+
+.park-card-body {
+    padding: 1.5rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+.match-badge {
+    background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+    color: white;
+}
+
+.difficulty-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: #111827;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Info Box Styles ===== */
+#info-box {
+    position: relative;
+    background: #050505;
+    color: #e2e2e2;
+    padding: 90px 0;
+    overflow: hidden;
+}
+
+.neon-particles span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 255, 110, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff66;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120px) scale(0.6); opacity: 0; }
+}
+
+.btn-neon {
+    background: #00ff66;
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0 0 10px #00ff66;
+    animation: borderPulse 2s infinite ease-in-out;
+    transition: 0.25s;
+}
+
+@keyframes borderPulse {
+    0%, 100% { box-shadow: 0 0 10px #00ff66; }
+    50% { box-shadow: 0 0 25px #00ff66; }
+}
+
+.btn-neon:hover {
+    background: #00e65c;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 100, 0.15);
+    border-radius: 16px;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    border-color: #00ff66;
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
+}
+
+.info-card img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.25);
+}
+
+/* Ensure the top info cards and the park highlights share the same visual height */
+#infoEntriesContainer .info-card,
+.park-highlights-row .info-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Text content inside info cards */
+#infoEntriesContainer .info-card > div,
+.park-highlights-row .info-card > div {
+    padding: 12px 18px;
+    text-align: center;
+}
+
+/* Make highlight images fill the card and crop nicely */
+.park-highlights-row .info-card img {
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 12px;
+    display:block;
+}
+
+.park-highlights-row .info-card .caption-top { margin-bottom:8px; color:#d9ffd9; font-size:13px; }
+
+/* Highlight variants for Park Highlights */
+.park-highlights-row .info-card.highlight-1 { border: 1px solid rgba(16,185,129,0.12); box-shadow: 0 8px 28px rgba(16,185,129,0.06); }
+.park-highlights-row .info-card.highlight-1::before { content: ''; position: absolute; inset: 0; border-radius: 16px; pointer-events: none; box-shadow: inset 0 0 0 2px rgba(16,185,129,0.06); }
+
+.park-highlights-row .info-card.highlight-2 { border: 1px solid rgba(99,102,241,0.10); box-shadow: 0 8px 28px rgba(99,102,241,0.06); }
+.park-highlights-row .info-card.highlight-2::before { content: ''; position: absolute; inset: 0; border-radius: 16px; pointer-events: none; box-shadow: inset 0 0 0 2px rgba(99,102,241,0.05); }
+
+.park-highlights-row .info-card.highlight-3 { border: 1px solid rgba(249,115,22,0.10); box-shadow: 0 8px 28px rgba(249,115,22,0.06); }
+.park-highlights-row .info-card.highlight-3::before { content: ''; position: absolute; inset: 0; border-radius: 16px; pointer-events: none; box-shadow: inset 0 0 0 2px rgba(249,115,22,0.05); }
+
+.park-highlights-row .info-card.highlight-4 { border: 1px solid rgba(14,165,233,0.10); box-shadow: 0 8px 28px rgba(14,165,233,0.06); }
+.park-highlights-row .info-card.highlight-4::before { content: ''; position: absolute; inset: 0; border-radius: 16px; pointer-events: none; box-shadow: inset 0 0 0 2px rgba(14,165,233,0.05); }
+
+/* Make sure cards are positioned relative for pseudo-elements */
+.park-highlights-row .info-card { position: relative; overflow: hidden; }
+
+/* Image styling to create a framed effect */
+.park-highlights-row .info-card img { border-radius: 10px; transform-origin: center; transition: transform 0.45s cubic-bezier(.2,.9,.2,1); }
+.park-highlights-row .info-card:hover img { transform: scale(1.06) rotate(-0.5deg); }
+
+/* Caption pill on top */
+.park-highlights-row .info-card .caption-top {
+    display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(0,0,0,0.24); color:#bfffe9; font-weight:600; font-size:13px;
+}
+
+/* Hover lift */
+.park-highlights-row .info-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(2,6,23,0.18); }
+
+@media (max-width: 768px){
+    .park-highlights-row .info-card img { height: 140px; }
+    .park-highlights-row .info-card { min-height: 180px; }
+}
+
+/* Favorite button (heart) on park cards */
+.fav-btn {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fav-btn i { font-size: 1.05rem; }
+.fav-btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(16,185,129,0.12); }
+
+/* Footer favorite highlighted card */
+.footer-fav { background: rgba(0,0,0,0.28); border-radius: 12px; padding: 8px; }
+.footer-fav img { height: 72px; object-fit: cover; border-radius: 8px; }
+
+/* Make heart filled appear red */
+.text-danger { color: #ff4757 !important; }
+
+/* Placeholder '+' for park highlights */
+.placeholder-plus { display:flex; align-items:center; justify-content:center; height:200px; background:rgba(255,255,255,0.03); border-radius:12px; }
+.placeholder-plus .plus-box { font-size:48px; color:#9fffb1; font-weight:700; }
+
+/* ensure images placed into the placeholder fill the box */
+.placeholder-plus img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* small remove/unfavorite button in highlight boxes */
+.placeholder-plus { position: relative; }
+.placeholder-plus .fav-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,40,40,0.95);
+    color: #fff;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.placeholder-plus .fav-remove:focus{ outline: none; }
+
+/* Make park card clickable cursor */
+.park-card { cursor: pointer; }
+.park-card:hover { transform: translateY(-6px); transition: transform 0.18s ease; }
+
+/* Park name as plain bold text (not a blue link) */
+.park-detail-link { color: #0b0b0b; font-weight:700; text-decoration: none; cursor: pointer; }
+.park-detail-link:hover { text-decoration: underline; }
+
+/* Favorite button (heart) on park cards */
+.fav-btn {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fav-btn i { font-size: 1.05rem; }
+.fav-btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(16,185,129,0.12); }
+
+/* Footer favorite highlighted card */
+.footer-fav { background: rgba(0,0,0,0.28); border-radius: 12px; padding: 8px; }
+.footer-fav img { height: 72px; object-fit: cover; border-radius: 8px; }
+
+/* Make heart filled appear red */
+.text-danger { color: #ff4757 !important; }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Utility Classes ===== */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button, a, .card {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        padding-top: 100px;
+    }
+    
+    .glass-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Spin The Wheel Styles ===== */
+.wheel-wrapper { position: relative; width: 320px; height: 320px; margin: 0 auto; }
+.wheel { width: 320px; height: 320px; border-radius: 50%; position: relative; overflow: hidden; box-shadow: 0 8px 30px rgba(2,6,23,0.4); transition: transform 4s cubic-bezier(.15,.8,.2,1); }
+.wheel.spin { transition: transform 4s cubic-bezier(.15,.8,.2,1); }
+.wheel .slice-label { position: absolute; left: 50%; top: 50%; transform-origin: 0 0; font-size: 12px; color: #061017; font-weight:700; text-shadow: 0 1px 0 rgba(255,255,255,0.6); }
+.pointer { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); font-size: 22px; color: #fffb; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.6)); pointer-events: none; }
+.modal-content .btn { margin: 0 6px; }
+#wheelResult { min-height: 56px; display:flex; align-items:center; justify-content:center; color:#dfffe6; }
+
+/* Make wheel responsive on small screens */
+@media (max-width: 480px) {
+    .wheel-wrapper { width: 260px; height: 260px; }
+    .wheel { width: 260px; height: 260px; }
+}
